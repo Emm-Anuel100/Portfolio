@@ -25,8 +25,7 @@ function PageTransitions() {
       let current_btn = document.querySelectorAll('.active-btn');
       current_btn[0].className = current_btn[0].className.replace('active-btn', '');
       this.className += 'active-btn';
-    })
-      
+    })  
    }
 
    // active class for sections
@@ -62,13 +61,11 @@ PageTransitions();
 
 
 window.addEventListener('scroll', () =>{
-
    let reveals  = document.querySelectorAll('.reveal'); 
    for (var i = 0; i < reveals.length; i++){
        let windowheight = window.innerHeight;
        let revealtop = reveals[i].getBoundingClientRect().top;
        let revealpoint = 120;
-
 
        if (revealtop  <  windowheight + revealpoint) {
            reveals[i].classList.add('reveal-active');
